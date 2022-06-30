@@ -117,7 +117,7 @@ nav {
 }
 nav ul {
 	display: flex;
-  list-style-type: none;/* Enlève le point sur le côté de la puce à liste */
+  list-style-type: none;/* Enlève le type de style de la puce à liste */
 }
 
 nav li {
