@@ -184,12 +184,12 @@ a {
 
   /* Quand la souris passe sur Hébergements une bordure solid de 4px avec la couleur bleu s'affiche */
 .sub-nav1:hover {
-  border-top: 4px solid #0065fc; /* Brodure solid de 4px avec la couleur bleu */
+  border-top: 4px solid #0065fc; /* Bordure solid de 4px avec la couleur bleu */
 }
 
 /* Quand la souris passe sur Activités une bordure solid de 4px avec la couleur bleu s'affiche */
 .sub-nav2:hover {
-  border-top: 4px solid #0065fc; /* Brodure solid de 4px avec la couleur bleu */
+  border-top: 4px solid #0065fc; /* Bordure solid de 4px avec la couleur bleu */
 }      
 
   @media screen and (max-width: 768px) {
@@ -354,7 +354,7 @@ input {
 }
 .TopFiltersFilter span {
   font-weight: 800;
-  padding: 17px;
+  padding: 0px;
 }
 
 .TopFiltersFilter:hover {
@@ -506,6 +506,7 @@ border-radius: 20px 20px 0 0;
   box-shadow: 2px 3px 3px darkgrey;
   margin-top: 10px;
   padding: 5px 0 5px 5px;
+  flex-wrap: wrap;
 }
 
 .hosting-Popular-Card {
