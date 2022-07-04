@@ -1,10 +1,8 @@
 
-/*propriété container */
+/*propriété body */
 * {
+  box-sizing: border-box; /* Opera/IE 8+ ok */
 
-  box-sizing: border-box; /* Opera/IE 8+ */
-  -moz-box-sizing: border-box; /* Firefox, autres Gecko */
-  -webkit-box-sizing: border-box; /* Safari/Chrome, autres WebKit */
 }
  
         
@@ -46,55 +44,55 @@ body {
   margin:  0px auto;/* Marge automatiquement à 0 */
   max-width: 1440px;/* Taille maximum de l'écran utilisé */
   padding: 0;
-  font-family: 'raleway';
+  font-family: 'raleway', sans-serif;/* Police utilisé si Raleway non disponible --> sans-serif va remplacer */
+  min-width: 380px;
+  max-width: 95%;
+  margin: auto;
+ 
   
 }
 main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-left: 13px;
-  margin-right: 13px;
+  margin-left: 15px;
+  margin-right: 15px;
   color: black;
   background-color: white;
 }
-.container {
-  min-width: 380px;
-  max-width: 95%;
-  margin: auto;
-  padding: 0 40px;
-}
 
-.container h1 {
-  font-size: 25px;
-  font-weight: 800;
+h1 {
+  font-size: 25px;/*  taille de fonte utilisée pour le texte */
+  font-weight: 800;/*  graisse utilisée pour le texte */
  
 }
-.container h2 {
-  font-size: 21px;
-  font-weight: 800;
+h2 {
+  font-size: 20px;/*  taille de fonte utilisée pour le texte */
+  font-weight: 700;/*  graisse utilisée pour le texte */
+  margin-top: 40px;/*espace vertical pour la marge appliquée en haut de l'élément*/
+  font-family: 'raleway', sans-serif;/* Police utilisé si Raleway non disponible --> sans-serif va remplacer */
  
 }
-.container h3 {
-  font-size: 17px;
-  font-weight: 800;
+h3 {
+  font-size: 17px;/*  taille de fonte utilisée pour le texte */
+  font-weight: 600;/*  graisse utilisée pour le texte */
  
 }
-.container p {
-  font-size: 16px;
-  font-weight: 500;
+ p {
+  font-size: 15px;/*  taille de fonte utilisée pour le texte */
+  font-weight: 400;/*  graisse utilisée pour le texte */
 }
 @media all and (max-width:480px) {
-  .container {
+  body {
     padding: 0px 0px;
     width: auto;
   }
 
-  .container h2 {
-    font-size: 21px;
+ h2 {
+    font-size: 18px;/*  taille de fonte utilisée pour le texte */
   }
-  .container h3 {
-    font-size: 20px;
+   h3 {
+    font-size: 16px;/*  taille de fonte utilisée pour le texte */
   }
 }
 /*NAVBAR*/
@@ -103,43 +101,51 @@ header {
   display: flex;/* Demande à l'objet d'être Flex*/
   justify-content: space-between;/* Les éléments sont répartis équitablement. Le bord du premier est aligné sur le début 
   du conteneur et la fin du dernier est alignée sur la fin du conteneur */
-  position: relative;
-  top: 0;
-}
+  position: relative;/* façon dont un élément est positionné dans un document*/
+  top: 0; /* position du bord haut de la marge d'un élément positionné par rapport */
+  margin: auto; /*taille des marges sur les quatre côtés de l'élément */
+  align-items: flex-start; /*Les éléments sont tous alignés au début*/
+} 
 /* Ensemble de la barre nav qui englobe Hébergements et Activités */
 nav {
   
     display: flex;/* Demande à l'objet d'être Flex*/
-    align-items: center;
-    justify-content: flex-end;
-    flex-wrap: wrap;
+    align-items: center;/*Les éléments sont tous alignés au centre*/
+    justify-content: flex-end; /* Éléments flexibles groupés à la fin */
+    flex-wrap: wrap; /*autorise ou interdit les retours à la ligne dans un flex-box*/
     width: 100%;/* Largeur du block */
 }
 nav ul {
-	display: flex;
+	display: flex;/* Demande à l'objet d'être Flex*/
   list-style-type: none;/* Enlève le type de style de la puce à liste */
 }
 
 nav li {
 	list-style: none;/* Enlève le point sur le côté de la puce à liste */
-	padding-left: 30px;
+	padding-left: 30px;/* espace gauche entre le contenu et la bordure */
 }
 
 #logo {/* Image Booki */
   display: flex; /* Demande à l'objet d'être Flex*/
   object-fit: contain; /* Permet à l'image de prendre tout le block sans se déformer*/
-  height: 33%;
+  height: 33%;/* hauteur de l'element  */
   width: auto; /* Largeur du block auto */
-  margin-right: auto;
-  padding-left: 15px;
+  margin-right: auto;/* marge droite auto */
+  padding-left: 15px;/* espace gauche entre le contenu et la bordure */
 
 }
-
+.Header nav {
+  font-family: 'raleway', sans-serif;/* Police utilisé si Raleway non disponible --> sans-serif va remplacer */
+  font-size: 100%;/*  taille de fonte utilisée pour le texte */
+  font-weight: 500;/*la graisse utilisée pour le texte. */
+} 
 .nav-bar {
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
+  display: flex;/* Demande à l'objet d'être Flex*/
+  justify-content: flex-end; /* Éléments flexibles groupés à la fin */
+  align-items:center ;/*Les éléments sont tous alignés au centre*/
+
+  
   
 }
 
@@ -189,7 +195,7 @@ a {
 
 /* Quand la souris passe sur Activités une bordure solid de 4px avec la couleur bleu s'affiche */
 .sub-nav2:hover {
-  border-top: 4px solid #0065fc; /* Bordure solid de 4px avec la couleur bleu */
+  border-top: 2px solid #0065fc; /* Bordure solid de 4px avec la couleur bleu */
 }      
 
   @media screen and (max-width: 768px) {
@@ -234,6 +240,12 @@ a {
           .nav-bar a:hover {
             border-bottom-color: #0065fc;
             border-top-color: transparent;
+          }
+          .sub-nav1:hover {
+            border-top: transparent; /* Bordure haut transparent */
+          }
+          .sub-nav2:hover {
+            border-top: transparent; /* Bordure haut transparent */
           }
         }
         
@@ -333,17 +345,15 @@ input {
   border-radius: 50%;
   color: #0065FC;
   background-color: #DEEBFF;
-  padding: 14px;
+  padding: 10px;
   margin: -3px;
 }
-.fa-solid.fa-child-reaching{
-  padding: 14px 16px;
-}
+
 
 .TopFiltersFilter{
 
   border-radius: 40px;
-  transition: all 1s ease-out;
+  box-shadow: #0065FC;
   border: 2px solid #F2F2F2;
   display: flex;
   justify-content: space-between;
@@ -427,8 +437,7 @@ input {
   border-radius: 1.5rem;
 
 }
-.hosting-Main-Card-link {
-}
+
 .hosting-Main-Card img {
 height: 110px;
 width: 100%;
