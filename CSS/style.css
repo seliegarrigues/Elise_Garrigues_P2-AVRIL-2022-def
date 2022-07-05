@@ -43,7 +43,7 @@ html {
 body {
   margin:  0px auto;/* Marge automatiquement à 0 */
   max-width: 1440px;/* Taille maximum de l'écran utilisé */
-  padding: 0;
+  padding: 0;/* espace  entre le contenu et la bordure */
   font-family: 'raleway', sans-serif;/* Police utilisé si Raleway non disponible --> sans-serif va remplacer */
   min-width: 380px;
   max-width: 95%;
@@ -84,7 +84,7 @@ h3 {
 }
 @media all and (max-width:480px) {
   body {
-    padding: 0px 0px;
+    padding: 0px 0px;/* espace  entre le contenu et la bordure */
     width: auto;
   }
 
@@ -140,7 +140,7 @@ nav li {
   font-weight: 500;/*la graisse utilisée pour le texte. */
 } 
 .nav-bar {
-  width: 100%;
+  width: 100%;/* Largeur du block */
   display: flex;/* Demande à l'objet d'être Flex*/
   justify-content: flex-end; /* Éléments flexibles groupés à la fin */
   align-items:center ;/*Les éléments sont tous alignés au centre*/
@@ -161,7 +161,7 @@ a:hover {
 a {
   text-decoration: none;
   font-weight: 600;
-  padding: 30px;
+  padding: 30px;/* espace  entre le contenu et la bordure */
   border-top: 3px solid transparent;
   display:flex;
   justify-content: space-between;
@@ -200,7 +200,7 @@ a {
 
   @media screen and (max-width: 768px) {
     body {
-     padding: 0;
+     padding: 0;/* espace  entre le contenu et la bordure */
    }
         
           .container {
@@ -209,7 +209,7 @@ a {
           #logo {
             justify-content: center;
             margin: auto;
-            padding-left: 0px;
+            padding-left: 0px;/* espace gauche entre le contenu et la bordure */
           }
           .logo {
             height: 33%;
@@ -219,7 +219,7 @@ a {
           }
         
           .nav {
-            padding: 0;
+            padding: 0;/* espace  entre le contenu et la bordure */
             width: 70%;
           }
         
@@ -228,7 +228,7 @@ a {
           }
           .nav ul 
           {
-            flex-basis:   100%;
+            flex-basis:100%;
           }
         
           .nav-bar a {
@@ -252,7 +252,7 @@ a {
 /* SEARCH-FORM*/
 #Top {
   margin: 15px 0;
-  padding: 0 15px;
+  padding: 0 15px;/* espace  entre le contenu et la bordure */
   margin-top: 0;
 }
 
@@ -270,23 +270,24 @@ a {
 }
 
 .Topform > * {
-  padding: 15px 16px;
+  padding: 15px 16px;/* espace  entre le contenu et la bordure */
   border: none;
   font-size: 100%;
 }
 .TopFormIcon{
   background-color: #F2F2F2;
-  border-radius: 12px 0 0 12px;
+  border-radius: 14px 0 0 14px;
+  
 }
 .Topform button:hover {
   cursor: pointer;
 }
 
 .TopFormSearchinput {
-  padding-left: 3%;
+  padding-left: 3%;/* espace gauche entre le contenu et la bordure */
   font-weight: bold;
   border: 1px solid #F2F2F2;
-  font-weight: 700;
+  font-weight: 600;
 }
 .TopFormSearchinput::placeholder {
   color: black;
@@ -299,13 +300,14 @@ input {
 }
 .TopForm button {
   background-color: #0065FC;
-  border-radius: 0 12px 12px 0;
+  border-radius: 0 14px 14px 0;
   border: none;
   color: white;
   cursor: pointer;
   opacity: 0.8;
   font-size: 16px;
   font-weight: 600;
+  
 }
 
 .TopForm button:hover {
@@ -321,13 +323,17 @@ input {
   }
   .TopFormSubmitinputText {
     display: none;
+    padding: 5%;/* espace  entre le contenu et la bordure */
   }
   .TopForm button {
-    border-radius: 12px;
-    margin-left: -20px;
+    border-radius: 14px;
+    margin-left: 20px;
+    
+    
   }
   .TopFormSubmitinputIcon {
     display: inline;
+    padding: 5%;/* espace  entre le contenu et la bordure */
   }
 }
 /* FILTERS */
@@ -346,7 +352,7 @@ input {
   color: #0065FC;
   background-color: #DEEBFF;
   padding: 10px;
-  margin: -3px;
+  margin: 0px;
 }
 
 
@@ -363,8 +369,9 @@ input {
   
 }
 .TopFiltersFilter span {
-  font-weight: 800;
-  padding: 0px;
+  font-weight: 600;
+  font-size: 80%;
+  padding: 0px 5px 0px 0px;/* espace  entre le contenu et la bordure */
 }
 
 .TopFiltersFilter:hover {
@@ -379,6 +386,7 @@ input {
   }
   .TopFilters {
     gap: 14px;
+    
   }
 }
 /*RESULTS */
@@ -416,7 +424,7 @@ input {
   border-radius: 20px;
   display: flex;
   flex-flow: wrap;
-  width: 100%;
+  width: 67%;
 
 }
 
@@ -430,11 +438,12 @@ input {
 }
 
 .hosting-Main-Card {
-  width: 30%;
+  width: 29%;
   margin: .8rem;
   background: #FFFFFF;
   height: 220px;
   border-radius: 1.5rem;
+  box-shadow: 2px 3px 3px darkgrey;
 
 }
 
@@ -456,7 +465,8 @@ border-radius: 20px 20px 0 0;
 }
 .hosting-Main-Card-content {
   display: flex;
-  padding-left: 10px;
+  padding-left: 10px;/* espace gauche entre le contenu et la bordure */
+  padding-bottom: 4%;
   flex-direction:column;
   max-height: 200px;
   margin: 0;
@@ -465,7 +475,7 @@ border-radius: 20px 20px 0 0;
   margin: 5px 0 0 0;
 }
 .plus {
-  padding: 10px 0 10px 30px;
+  padding: 10px 0 10px 30px;/* espace  entre le contenu et la bordure */
 }
 
 /*Grade*/
@@ -538,7 +548,7 @@ border-radius: 20px 20px 0 0;
   margin-bottom: 0;
 }
 
-.hosting-Popular-Card-Grade .hosting-Main-Card-Grade {
+.hosting-Popular-Card-Grade + .hosting-Main-Card-Grade {
   margin-right: 5px;
   padding: 5px 8px;
   border: #F2F2F2 2px solid;
@@ -594,23 +604,25 @@ border-radius: 20px 20px 0 0;
 }
 @media screen and (max-width: 768px) {
   .hosting-Main-Title {
-    padding: 0 10px;
+    padding: 0 10px;/* espace  entre le contenu et la bordure */
   }
   .hosting-Main-Card {
     display: flex;
     justify-content: space-around;
     flex-direction: column;
+    width: auto;
   }
   .hosting-Main {
     gap: 5px;
+    width: auto;
   }
   .plus {
-    padding: 10px;
+    padding: 10px;/* espace  entre le contenu et la bordure */
   }
 
   .hosting-Popular-Card {
     margin-top: 10px;
-    padding: 5px;
+    padding: 5px;/* espace  entre le contenu et la bordure */
   }
 }
 /*ACTIVITIES */
