@@ -327,9 +327,12 @@ input {
   }
   .TopForm button {
     border-radius: 14px;
-    margin-left: 20px;
-    
-    
+    margin-left: 20px; 
+  
+  }
+  .TopFormSubmitinput {
+    display: flex;
+    padding: 5%;/* espace  entre le contenu et la bordure */
   }
   .TopFormSubmitinputIcon {
     display: inline;
@@ -386,9 +389,16 @@ input {
   }
   .TopFilters {
     gap: 14px;
+  
+      padding-top: 15px;
+      display: flex;
+      flex-direction: wrap;
+     
+      
+    }
     
   }
-}
+
 /*RESULTS */
 .Topresult {
   display: flex;
