@@ -1,40 +1,14 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800&display=swap');
+
+
 /*propriété body */
 * {
   box-sizing: border-box; /* Opera/IE 8+ ok */
 
 }
  
-        
-@font-face {
-  font-family: "Raleway", sans-serif; /* Police utilisé si Raleway non disponible --> sans-serif va remplacer */
-  src: url('Raleway-Regular.eot');
-  src: url('Raleway-Regular.eot?#iefix') format('embedded-opentype'),
-       url('Raleway-Regular.svg#Raleway-Regular') format('svg'),
-       url('Raleway-Regular.ttf') format('truetype'),
-       url('Raleway-Regular.woff') format('woff'),
-       url('Raleway-Regular.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-}
-
-strong {
-  font-weight: bold;
-}
-
-.fa-solid fa-star blue {
-  color: #0065FC;
-}
-
-.fa-solid fa-star grey {
-  color: #F2F2F2;
-}
-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
+   
 html {
   scroll-behavior: auto;
   width: 100%;
@@ -45,27 +19,27 @@ body {
   max-width: 1440px;/* Taille maximum de l'écran utilisé */
   padding: 0;/* espace  entre le contenu et la bordure */
   font-family: 'raleway', sans-serif;/* Police utilisé si Raleway non disponible --> sans-serif va remplacer */
-  height: 100%;
-  width: 99%;
+  min-width: 380px;
+  max-width: 95%;
   margin: auto;
- 
-  
-}
-main {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-left: 15px;
-  margin-right: 15px;
-  color: black;
-  background-color: white;
+}     
+
+.container 
+{
+    max-width:1400px;
+    width: 100%;
+    margin: 0 auto; /*top et bottom : 0 left et right : 0*/
+    padding : 0 15px
 }
 
-h1 {
-  font-size: 25px;/*  taille de fonte utilisée pour le texte */
-  font-weight: 800;/*  graisse utilisée pour le texte */
- 
+img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
 }
+
+
+
 h2 {
   font-size: 20px;/*  taille de fonte utilisée pour le texte */
   font-weight: 700;/*  graisse utilisée pour le texte */
@@ -78,77 +52,16 @@ h3 {
   font-weight: 600;/*  graisse utilisée pour le texte */
  
 }
- p {
-  font-size: 15px;/*  taille de fonte utilisée pour le texte */
-  font-weight: 400;/*  graisse utilisée pour le texte */
-}
-@media all and (max-width:480px) {
-  body {
-    padding: 0px 0px;/* espace  entre le contenu et la bordure */
-    width: auto;
-  }
 
- h2 {
-    font-size: 18px;/*  taille de fonte utilisée pour le texte */
-  }
-   h3 {
-    font-size: 16px;/*  taille de fonte utilisée pour le texte */
-  }
-}
 /*NAVBAR*/
 
 header {
   display: flex;/* Demande à l'objet d'être Flex*/
   justify-content: space-between;/* Les éléments sont répartis équitablement. Le bord du premier est aligné sur le début 
   du conteneur et la fin du dernier est alignée sur la fin du conteneur */
-  position: relative;/* façon dont un élément est positionné dans un document*/
-  top: 0; /* position du bord haut de la marge d'un élément positionné par rapport */
   margin: auto; /*taille des marges sur les quatre côtés de l'élément */
   align-items: flex-start; /*Les éléments sont tous alignés au début*/
 } 
-/* Ensemble de la barre nav qui englobe Hébergements et Activités */
-nav {
-  
-    display: flex;/* Demande à l'objet d'être Flex*/
-    align-items: center;/*Les éléments sont tous alignés au centre*/
-    justify-content: flex-end; /* Éléments flexibles groupés à la fin */
-    flex-wrap: wrap; /*autorise ou interdit les retours à la ligne dans un flex-box*/
-    width: 100%;/* Largeur du block */
-}
-nav ul {
-	display: flex;/* Demande à l'objet d'être Flex*/
-  list-style-type: none;/* Enlève le type de style de la puce à liste */
-}
-
-nav li {
-	list-style: none;/* Enlève le point sur le côté de la puce à liste */
-	padding-left: 30px;/* espace gauche entre le contenu et la bordure */
-}
-
-#logo {/* Image Booki */
-  display: flex; /* Demande à l'objet d'être Flex*/
-  object-fit: contain; /* Permet à l'image de prendre tout le block sans se déformer*/
-  height: 33%;/* hauteur de l'element  */
-  width: auto; /* Largeur du block auto */
-  margin-right: auto;/* marge droite auto */
-  padding-left: 15px;/* espace gauche entre le contenu et la bordure */
-
-}
-.Header nav {
-  font-family: 'raleway', sans-serif;/* Police utilisé si Raleway non disponible --> sans-serif va remplacer */
-  font-size: 100%;/*  taille de fonte utilisée pour le texte */
-  font-weight: 500;/*la graisse utilisée pour le texte. */
-} 
-.nav-bar {
-  width: 100%;/* Largeur du block */
-  display: flex;/* Demande à l'objet d'être Flex*/
-  justify-content: flex-end; /* Éléments flexibles groupés à la fin */
-  align-items:center ;/*Les éléments sont tous alignés au centre*/
-
-  
-  
-}
-
 a {
   color: black;
   text-decoration: none;
@@ -156,108 +69,78 @@ a {
 a:hover {
   color: #0065FC;
 }
+.logo {/* Image Booki */
+  height: 70px;/* hauteur de l'element  */
+}
+/* Ensemble de la barre nav qui englobe Hébergements et Activités */
 
-.nav-bar   
-a {
+.nav-bar a {
   text-decoration: none;
   font-weight: 600;
-  padding: 30px;/* espace  entre le contenu et la bordure */
-  border-top: 3px solid transparent;
+  padding: 20px 10px;/* espace  entre le contenu et la bordure */
   display:flex;
   justify-content: space-between;
-  align-items: center;
-  
 	color: black;
 	}
 
-.nav-bar 
-  a:hover {
+.nav-bar a:hover {
   color: #0065FC;
   border-top: #0065FC;
   border-color: #0065FC;
   padding-top: 30px;
 				}
 
-.nav-bar 
- > a:visited:hover {
+.nav-bar > a:visited:hover {
   color: #0065FC;
 					}
 
-.nav-bar 
-> a:visited {
+.nav-bar > a:visited {
   color: inherit;
 				}
 
-  /* Quand la souris passe sur Hébergements une bordure solid de 4px avec la couleur bleu s'affiche */
-.sub-nav1:hover {
-  border-top: 4px solid #0065fc; /* Bordure solid de 4px avec la couleur bleu */
-}
 
-/* Quand la souris passe sur Activités une bordure solid de 4px avec la couleur bleu s'affiche */
-.sub-nav2:hover {
+/* Quand la souris passe sur Hébergements et sur Activités une bordure solid de 4px avec la couleur bleu s'affiche */
+.nav-bar li:hover {
   border-top: 2px solid #0065fc; /* Bordure solid de 4px avec la couleur bleu */
 }      
+nav ul {
+	display: flex;/* Demande à l'objet d'être Flex*/
+  list-style-type: none;/* Enlève le type de style de la puce à liste */
+  padding: 0;
+  margin: 0;
+}
 
-  @media screen and (max-width: 768px) {
-    body {
-     padding: 0;/* espace  entre le contenu et la bordure */
-   }
-        
-          .container {
-            width: fit-content;
-          }
-          #logo {
-            justify-content: center;
-            margin: auto;
-            padding-left: 0px;/* espace gauche entre le contenu et la bordure */
-          }
-          .logo {
-            height: 33%;
-            width: auto;
-            
-          
-          }
-        
-          .nav {
-            padding: 0;/* espace  entre le contenu et la bordure */
-            width: 70%;
-          }
-        
-          .nav-bar {
-            flex-basis: 100%;
-          }
-          .nav ul 
-          {
-            flex-basis:100%;
-          }
-        
-          .nav-bar a {
-            flex-basis: 50%;
-            text-align: center;
-            border-bottom: 3px solid lightgrey;
-          }
-        
-          .nav-bar a:hover {
-            border-bottom-color: #0065fc;
-            border-top-color: transparent;
-          }
-          .sub-nav1:hover {
-            border-top: transparent; /* Bordure haut transparent */
-          }
-          .sub-nav2:hover {
-            border-top: transparent; /* Bordure haut transparent */
-          }
-        }
-        
+nav li {
+	list-style: none;/* Enlève le point sur le côté de la puce à liste */
+	/* espace gauche entre le contenu et la bordure */
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: black;
+  background-color: white;
+}
+
+h1 {
+  font-size: 25px;/*  taille de fonte utilisée pour le texte */
+  font-weight: 800; /*  graisse utilisée pour le texte */
+  margin: 15px 0 10px;
+}
 /* SEARCH-FORM*/
 #Top {
   margin: 15px 0;
-  
+  padding: 0 15px;/* espace  entre le contenu et la bordure */
   margin-top: 0;
 }
+
 #Top p {
   font-size: 14px;
+  margin: 0;
+  margin: 0 0 13px 0;
 }
+
 .Topform {
   height: 45px;
   display: flex;
@@ -266,6 +149,7 @@ a {
   overflow: hidden;
   border: 1px solid #F2F2F2;
 }
+
 .Topform > * {
   padding: 15px 16px;/* espace  entre le contenu et la bordure */
   border: none;
@@ -273,25 +157,8 @@ a {
 }
 .TopFormIcon{
   background-color: #F2F2F2;
-  border-radius: 14px 0 0 14px;  
-}
-.Topform button:hover {
-  cursor: pointer;
-}
-.TopFormSearchinput {
-  padding-left: 3%;/* espace gauche entre le contenu et la bordure */
-  font-weight: bold;
-  border: 1px solid #F2F2F2;
-  font-weight: 600;
-}
-.TopFormSearchinput::placeholder {
-  color: black;
-  font: inherit;
-}
-
-input {
-  background-color: transparent;
-  font: inherit;
+  border-radius: 14px 0 0 14px;
+  
 }
 .TopForm button {
   background-color: #0065FC;
@@ -302,42 +169,44 @@ input {
   opacity: 0.8;
   font-size: 16px;
   font-weight: 600;
-  
 }
-.TopFormSubmitinput {
-  height: 100%;
-  width: 100%;
+.Topform button:hover {
+  cursor: pointer;
+  opacity: 1;
 }
 
-.TopForm button:hover {
-  opacity: 1;
+.TopFormSearchinput {
+  padding-left: 3%;/* espace gauche entre le contenu et la bordure */
+  font-weight: bold;
+  border: 1px solid #F2F2F2;
+  font-weight: 600;
+}
+.TopFormSearchinput::placeholder {
+  color: black;
+  font: inherit;
+}
+.TopFormsubmitinput
+{
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+.fa-location-dot
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+input {
+  background-color: transparent;
+  font: inherit;
 }
 .TopFormSubmitinputIcon {
   background-color: inherit;
   display: none;
 }
-@media screen and (max-width: 768px) {
-  .TopForm {
-    margin-top: 30px;
-  }
-  .TopFormSubmitinputText {
-    display: none;
-    padding: 5%;/* espace  entre le contenu et la bordure */
-  }
-  .TopForm button {
-    border-radius: 14px;
-    margin-left: 20px; 
-  
-  }
-  .TopFormSubmitinput {
-    display: flex;
-    padding: 5%;/* espace  entre le contenu et la bordure */
-  }
-  .TopFormSubmitinputIcon {
-    display: inline;
-    padding: 5%;/* espace  entre le contenu et la bordure */
-  }
-}
+
+
 /* FILTERS */
 
 .TopFilters {
@@ -382,21 +251,7 @@ input {
   color: #0065FC;
   cursor: pointer;
 }
-@media screen and (max-width: 992px) {
-  .TopFilters h1 {
-    width: 100%;
-  }
-  .TopFilters {
-    gap: 14px;
-  
-      padding-top: 15px;
-      display: flex;
-      flex-direction: wrap;
-     
-      
-    }
-    
-  }
+
 
 /*RESULTS */
 .Topresult {
@@ -437,14 +292,17 @@ input {
 
 }
 
-.hosting-Main-Title h2 {
+.hosting p {
+  font-size: 15px;/*  taille de fonte utilisée pour le texte */
+  font-weight: 400;/*  graisse utilisée pour le texte */
+}
+#test {
   width: 100%;
 }
 
-.hosting-Main-Title-heb
-{
+
+.hosting-Main-Title h2 {
   width: 100%;
-  padding-left: 15px;
 }
 
 .hosting-Main-Card {
@@ -452,14 +310,15 @@ input {
   margin: .8rem;
   background: #FFFFFF;
   height: 220px;
-  border-radius: 20px;
+  border-radius: 1.5rem;
   box-shadow: 2px 3px 3px darkgrey;
 
 }
 
 .hosting-Main-Card img {
 height: 110px;
-padding: 2% 2% 2%;
+width: 100%;
+object-fit: cover;
 border-radius: 20px 20px 0 0;
 }
 .hosting .hosting-Main a {
@@ -494,19 +353,10 @@ border-radius: 20px 20px 0 0;
 }
 
 .grey {
-  color: #F2F2F2;
+  color: #d0caca;
 }
 
-@media screen and (max-width: 768px) {
-  .hosting-Main-Card img {
-    height: 130px;
-    width: 100%;
-  }
 
-  .hosting-Main-Card-Desc {
-    margin: 12px 0;
-  }
-}
 
 /*POPULAR*/
 
@@ -594,46 +444,6 @@ border-radius: 20px 20px 0 0;
   transition: all ease-out;
   transform: scale(1.05);
 }
-@media screen and (max-width: 992px) {
-  .hosting {
-    flex-direction: column;
-    flex-wrap: wrap;
-  }
-  .hosting-Popular {
-    order: -1;
-    border-radius: 0;
-  }
-  .hosting-Main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border: none;
-    background-color: white;
-  }
-}
-@media screen and (max-width: 768px) {
-  .hosting-Main-Title {
-    padding: 0 10px;/* espace  entre le contenu et la bordure */
-  }
-  .hosting-Main-Card {
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    width: auto;
-  }
-  .hosting-Main {
-    gap: 5px;
-    width: auto;
-  }
-  .plus {
-    padding: 10px;/* espace  entre le contenu et la bordure */
-  }
-
-  .hosting-Popular-Card {
-    margin-top: 10px;
-    padding: 5px;/* espace  entre le contenu et la bordure */
-  }
-}
 /*ACTIVITIES */
 
 .activities-list {
@@ -706,39 +516,13 @@ border-radius: 20px 20px 0 0;
   display: flex;
   max-height: 44px;
 }
-@media screen and (max-width: 992px) {
-  .activities-list {
-    gap: 20px;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    justify-content: space-around;
-    align-items: stretch;
-    align-content: inherit;
-    margin: 3%;
-  }
-
-  .card-activities {
-    max-width: 100%;
-    height: 100%;
-  }
-
-  .activities-list img {
-    object-fit: cover;
-    width: 100%;
-    height: 130px;
-  }
-  .activities h2 {
-    margin: 5% 4%;
-  }
-}
 
 /*FOOTER*/
 
 footer {
   display: flex;
-  padding-top: 15px;
-  padding-left: 15px;
+  margin-top: 50px;
+  padding: 3%;
   background-color: #F2F2F2;
 }
 
@@ -769,7 +553,104 @@ footer h3 {
   font-weight: 800;
   margin-bottom: 7%;
 }
-@media (max-width: 768px) {
+@media screen and (max-width: 992px) {
+  .TopFilters h1 {
+    width: 100%;
+  }
+  .TopFilters {
+    gap: 14px;  
+      padding-top: 15px;
+      display: flex;
+      flex-direction: wrap;     
+    }
+      .activities-list {
+        gap: 20px;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: space-around;
+        align-items: stretch;
+        align-content: inherit;
+        margin: 3%;
+      }
+    
+      .card-activities {
+        max-width: 100%;
+        height: 100%;
+      }
+    
+      .activities-list img {
+        object-fit: cover;
+        width: 100%;
+        height: 130px;
+      }
+      .activities h2 {
+        margin: 5% 4%;
+      }
+        .hosting {
+          flex-direction: column;
+          flex-wrap: wrap;
+        }
+        .hosting-Popular {
+          order: -1;
+          border-radius: 0;
+        }
+        .hosting-Main {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          border: none;
+          background-color: white;
+        }
+      
+}
+  
+@media (max-width: 768px) 
+{
+    body {
+     padding: 0;/* espace  entre le contenu et la bordure */
+   }
+        
+     .container {
+        width: fit-content;
+      }
+          #logo {
+            justify-content: center;
+            margin: auto;
+            padding-left: 0px;/* espace gauche entre le contenu et la bordure */
+          }
+          .logo {
+            height: 33%;
+            width: auto;
+          }
+        
+          .nav {
+            padding: 0;/* espace  entre le contenu et la bordure */
+            width: 70%;
+          }
+        
+          .nav-bar {
+            flex-basis: 100%;
+          }
+          .nav ul 
+          {
+            flex-basis:100%;
+          }
+        
+          .nav-bar a {
+            flex-basis: 50%;
+            text-align: center;
+            border-bottom: 3px solid lightgrey;
+          }
+        
+          .nav-bar a:hover {
+            border-bottom-color: #0065fc;
+            border-top-color: transparent;
+          }
+          .nav-bar li:hover {
+            border-top: transparent; /* Bordure haut transparent */
+          }
+        
   footer {
     flex-direction: column;
     padding-left: 5%;
@@ -778,5 +659,68 @@ footer h3 {
     margin-top: 6%;
     margin-bottom: 0;
   }
+    .TopForm {
+      margin-top: 30px;
+    }
+    .TopFormSubmitinputText {
+      display: none;
+      padding: 5%;/* espace  entre le contenu et la bordure */
+    }
+    .TopForm button {
+      border-radius: 14px;
+      margin-left: 20px; 
+    
+    }
+    .TopFormSubmitinput {
+      display: flex;
+      padding: 5%;/* espace  entre le contenu et la bordure */
+    }
+    .TopFormSubmitinputIcon {
+      display: inline;
+      padding: 5%;/* espace  entre le contenu et la bordure */
+    }
+      .hosting-Main-Title {
+        padding: 0 10px;/* espace  entre le contenu et la bordure */
+      }
+      .hosting-Main-Card {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        width: auto;
+      }
+      .hosting-Main {
+        gap: 5px;
+        width: auto;
+      }
+      .plus {
+        padding: 10px;/* espace  entre le contenu et la bordure */
+      }
+    
+      .hosting-Popular-Card {
+        margin-top: 10px;
+        padding: 5px;/* espace  entre le contenu et la bordure */
+      }
+        .hosting-Main-Card img {
+          height: 130px;
+          width: 100%;
+        }
+      
+        .hosting-Main-Card-Desc {
+          margin: 12px 0;
+        }
+      
 }
 
+@media all and (max-width:480px) {
+  body {
+    padding: 0px 0px;/* espace  entre le contenu et la bordure */
+    width: auto;
+  }
+
+ h2 {
+    font-size: 18px;/*  taille de fonte utilisée pour le texte */
+  }
+   h3 {
+    font-size: 16px;/*  taille de fonte utilisée pour le texte */
+  }
+}
