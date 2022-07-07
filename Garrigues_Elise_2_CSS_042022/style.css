@@ -685,6 +685,14 @@ footer h3 {
           order: -1;
           border-radius: 0;
         }
+        .card-popular-image {
+          width: 100%;
+        } 
+        .hosting-Popular-content img
+        {
+          height: 100%;
+          width: 880px;
+        }
         .hosting-Main {
           display: flex;
           flex-direction: column;
